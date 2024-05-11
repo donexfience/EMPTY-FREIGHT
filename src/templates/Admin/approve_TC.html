@@ -1,0 +1,28 @@
+{% extends 'Admin/adminindex.html'%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-hover table-striped">
+    <tr>
+      <td>NAME</td>
+      <td>ADDRESS</td>
+      <td>EMAIL</td>
+      <td>PHONE</td>
+      <td>PROOF</td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i['name']}}</td>
+      <td>&nbsp;{{i['place']}}<br>{{i['post']}}<br>{{i['pin']}}</td>
+      <td>&nbsp;{{i['email']}}</td>
+      <td>&nbsp;{{i['phone']}}</td>
+      <td><a href="../static/photo/{{i['proof']}}">{{i['proof']}}</a></td>
+      <td>{% if i['type']=='pending'%}<p><a href="accepttc?id={{i['lid']}}" class="btn btn-success">ACCEPT</a></p>
+      <p><a href="rejecttc?id={{i['lid']}}" class="btn btn-danger">REJECT</a></p>{% elif i['type']=='Trading_Company' %}Accepted{% else %} Rejected{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

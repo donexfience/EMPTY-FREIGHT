@@ -1,0 +1,28 @@
+{% extends 'Trading_Company/tcindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-hover table-striped">
+    <tr>
+      <td>USER NAME </td>
+      <td>COMPLAINT</td>
+      <td>DATE</td>
+      <td>&nbsp;REPLY</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>&nbsp;{{i['fname']}}{{i['lname']}}</td>
+      <td>&nbsp;{{i['complaint']}}</td>
+      <td>&nbsp;{{i['date']}}</td>
+      {% if i['reply']=='pending'%}
+      <td><a href="reply_box?id={{i['id']}}#about"class="btn btn-success"> REPLY</a></td>
+      {% else %}
+      <td>{{i['reply']}}</td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

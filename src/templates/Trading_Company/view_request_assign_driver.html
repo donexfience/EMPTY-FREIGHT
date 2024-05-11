@@ -1,0 +1,27 @@
+{% extends 'Trading_Company/tcindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="290" border="1" class="table table-hover table-striped">
+    <tr>
+      <td width="59">USER NAME </td>
+      <td width="69">load</td>
+      <td width="69">details</td>
+      <td width="40">DATE</td>
+      <td width="54">&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>&nbsp;&nbsp;{{i['fname']}}{{i['lname']}}</td>
+      <td>&nbsp;&nbsp;{{i['load']}}</td>
+      <td>&nbsp;&nbsp;{{i['details']}}</td>
+      <td>{{i['date']}}</td>
+      <td>{% if i['status']=='pending' %}<p><a href="rejectlocal_loadreq?id={{i['id']}}" class="btn btn-danger">REJECT </a></p>
+      <p><a href="Assign?id={{i['id']}}#about" class="btn btn-success">ASSIGN</a></p>{% elif i['status']=='assigned' %}Assign{% else %}Rejected{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

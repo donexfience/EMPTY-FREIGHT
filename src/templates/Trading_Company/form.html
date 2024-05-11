@@ -1,0 +1,101 @@
+{% extends 'Trading_Company/tcindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="adddr">
+  <table width="258" border="1" class="table" class="table table-hover">
+    <tr align="center">
+      <td width="248">FIRST NAME
+        </td>
+      <td>
+        <input type="text" name="textfield" required />
+      </td>
+    </tr>
+     <tr align="center">
+      <td>LAST NAME
+      </td>
+      <TD>
+        <input type="text" name="textfield2" required />
+      </td>
+    </tr>
+     <tr align="center">
+      <td>PLACE </td>
+       <td>
+        <input type="text" name="textfield3"required />
+       </td>
+    </tr>
+     <tr align="center">
+      <td>POST 
+      </td>
+      <td>
+        <input type="text" name="textfield4"required />
+     </td>
+    </tr>
+     <tr align="center">
+      <td>PIN 
+      </td>
+      <td>
+        <input type="text" name="textfield5" required="{6}" />
+     </td>
+    </tr>
+     <tr align="center">
+      <td>PHONE 
+      </td>
+      <td>
+        <input type="text" name="textfield6" required="[0-9]{9}" />
+      </td>
+    </tr>
+     <tr align="center">
+      <td>EMAIL 
+      </td>
+      <td>
+        <input type="text" name="textfield7"  required pattern="[a-z0-9._%+-]+[@][g][m][a][i][l][.][c][o][m]"/>
+      </td>
+    </tr>
+     <tr align="center">
+      <td>VEHICLE TYPE
+      </td>
+      <td>
+        <input type="text" name="textfield8"required />
+      </td>
+    </tr>
+     <tr align="center">
+      <td>VEHICLE NUMBER
+      </td>
+      <td>
+        <input type="text" name="textfield9" required/>
+      </td>
+    </tr>
+      </tr>
+     <tr align="center">
+      <td>license NUMBER
+      </td>
+      <td>
+        <input type="text" name="number" required/>
+      </td>
+     </tr>
+     <tr align="center">
+      <td>USERNAME 
+      </td>
+      <td>
+        <input type="text" name="textfield10"required />
+    </td>
+    </tr>
+     <tr align="center">
+      <td>PASSWORD 
+      </td>
+      <td>
+        <input type="text" name="textfield11" required/>
+    </td>
+    </tr>
+     <tr align="center">
+      <td>
+
+          <input type="submit" class="btn btn-info" name="Submit" value="Add" />
+
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

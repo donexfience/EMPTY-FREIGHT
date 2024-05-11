@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="register">
+  <table width="258" border="1" class="table" bgcolor="#D3F5FD">
+    <tr>
+      <td width="248">NAME
+        <label>
+        <input type="text" name="textfield" />
+      </label></td>
+    </tr>
+
+    <tr>
+      <td>PLACE 
+        <label>
+        <input type="text" name="textfield3" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>POST 
+        <label>
+        <input type="text" name="textfield4" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN 
+        <label>
+        <input type="text" name="textfield5" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PHONE 
+        <label>
+        <input type="text" name="textfield6" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>EMAIL 
+        <label>
+        <input type="text" name="textfield7"  required pattern="[a-z0-9._%+-]+[@][g][m][a][i][l][.][c][o][m]" />
+      </label></td>
+    </tr>
+
+
+    <tr>
+      <td>USERNAME 
+        <label>
+        <input type="text" name="textfield10" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>PASSWORD 
+        <label>
+        <input type="text" name="textfield11" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

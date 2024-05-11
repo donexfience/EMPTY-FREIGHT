@@ -1,0 +1,26 @@
+{% extends 'Admin/adminindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-hover table-striped">
+    <tr>
+
+      <td>USERNAME</td>
+      <td>DATE</td>
+      <td>FEEDBACK</td>
+
+    </tr>
+    {% for i in val %}
+    <tr>
+
+      <td>&nbsp;{{i['fname']}}&nbsp;{{i['lname']}}</td>
+      <td>&nbsp;&nbsp;{{i['date']}}</td>
+      <td>&nbsp;{{i['feedback']}}</td>
+
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
